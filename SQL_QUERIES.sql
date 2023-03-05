@@ -190,7 +190,9 @@ WHERE cus_id IN
  JOIN product P
  ON SP.PRO_ID = P.PRO_ID
  JOIN category C 
- ON P.cat_id = C.cat_id;
+ ON P.cat_id = C.cat_id
+ GROUP BY SP.PRO_ID;
+
  
  DROP VIEW lowest_expensive_product;
  
